@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eef2f7;
+}
+.booking-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 350px;
+}
+.booking-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.booking-container input,
+.booking-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.booking-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.booking-container button:hover {
+  background: #0056b3;
+}
+.error {
+  color: red;
+  font-size: 14px;
+}
+/* geoapify autocomplete dropdown*/
+.autocomplete-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input box styling */
+.autocomplete-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Dropdown results */
+.autocomplete-results {
+  position: absolute;
+  top: 100%; /* directly below input */
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  border-radius: 5px;
+  margin-top: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual suggestion */
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Highlight on hover */
+.autocomplete-item:hover {
+  background: #f0f0f0;
+}
