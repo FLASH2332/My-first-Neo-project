@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ride Booking</title>
+  <link rel="stylesheet" href="css/booking1.css">
+</head>
+<body>
+  <div class="booking-container">
+    <h2>Book a Ride</h2>
+    <form id="bookingForm">
+      <div class="autocomplete-container"><input type="text" id="pickup" placeholder="Pickup Location" required><div id="pickup-suggestions" class="autocomplete-results"></div></div>
+      <div class="autocomplete-container"><input type="text" id="drop" placeholder="Drop-off Location" required><div id="destination-suggestions" class="autocomplete-results"></div></div>
+      <input type="datetime-local" id="rideDate" required>
+      <button type="submit">Book Ride</button>
+      <p id="errorMsg" class="error"></p>
+    </form>
+  </div>
+
+  <script src="js/booking1.js"></script>
+</body>
+</html>

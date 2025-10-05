@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets\images\NeoRide.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Bungee+Spice&family=Emblema+One&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>NeoRide</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/booking.css" />
+  </head>
+  <body>
+    <!--Navigation Bar-->
+    <nav class="navbar">
+      <a href="#" class="logo"><i class="fas fa-car-alt"></i> NeoRide</a>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#" class="active">Home</a>
+        <a href="#">Booking</a>
+        <a href="#">Contact</a>
+        <a href="#">About Us</a>
+      </div>
+     <div class="authentication" id="authSection">
+  <!-- Will be replaced by JS if user is logged in -->
+</div>
+    </nav>
+
+    <div class="main-container">
+      <!-- Hero -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <p>Hey Buddy!</p>
+          <h1>Where are you<br /><span>Driving to?</span></h1>
+        </div>
+      </section>
+
+      <!-- Booking -->
+      <section class="booking-form-card">
+        <div class="form-grid">
+          <div class="input-group">
+            <label>FROM</label>
+            <div class="autocomplete-container">
+              <input type="text" id="pickup" />
+              <div id="pickup-suggestions" class="autocomplete-results"></div>
+            </div>
+          </div>
+          <div class="input-group">
+            <label>TO</label>
+            <div class="autocomplete-container">
+              <input type="text" id="destination" />
+              <div
+                id="destination-suggestions"
+                class="autocomplete-results"
+              ></div>
+            </div>
+          </div>
+          <div class="input-group">
+            <label>DATE & TIME</label
+            ><input type="datetime-local" id="dateTime" />
+          </div>
+          <div class="input-group">
+            <label>PASSENGERS</label
+            ><input type="number" id="passengers" value="1" min="1" />
+          </div>
+          <div class="button-group">
+            <button class="search-btn" data-type="Cab">
+              <i class="fas fa-taxi"></i> Book Cab
+            </button>
+            <button class="search-btn" data-type="Bike">
+              <i class="fas fa-motorcycle"></i> Book Bike
+            </button>
+            <button class="search-btn" data-type="Auto">
+              <i class="fas fa-shuttle-van"></i> Book Auto
+            </button>
+          </div>
+        </div>
+        <div id="bookingStatus" class="booking-status"></div>
+      </section>
+
+      <!-- Destinations -->
+      <section class="popular-destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-grid">
+          <div class="destination-card">
+            <img src="assets/images/airplane.png" height="60px" />
+            <h3>Airport</h3>
+            <p>Get to the airport on time</p>
+          </div>
+          <div class="destination-card">
+            <img src="assets/images/entrance.png" height="60px" />
+            <h3>Train Station</h3>
+            <p>Connect with your train journey</p>
+          </div>
+          <div class="destination-card">
+            <img src="assets/images/apartment.png" height="60px" />
+            <h3>Downtown</h3>
+            <p>Explore the city center</p>
+          </div>
+        </div>
+      </section>
+      
+      <!--Ride with friends section-->
+      <div class="wrapper-container">
+        <div class="left">
+          <img src="assets/images/generated-image-ai_1756711650441.jpg" alt="">
+        </div>
+        <div class="right">
+          <h1>Ride with friends <br>seamlessly</h1>
+          <p>Riding with friends just got easier: set up a group ride in the <br>Neo app, invite your friends, and arrive at your destination.<br> Friends who ride together save together.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <!--Ride Options section-->
+      <div class="parent">
+        <div class="top">
+          <h1>Use the Neo app to help you travel your way</h1></div>
+        <div class="bottom">
+          <div class="left">
+            <img src="assets/images/cabs.jpg" alt="cab">
+            <h1>Ride options</h1>
+            <p>There’s more than one way to move with Neo, no matter where you are or where you’re headed next.</p>
+          </div>
+          <div class="mid">
+            <img src="assets/images/airplane.jpg" alt="airport">
+            <h1>700+ airports</h1>
+            <p>You can request a ride to and from most major airports. Schedule a ride to the airport for one less thing to worry about.</p>
+          </div>
+          <div class="right">
+              <img src="assets/images/city.jpg" alt="city">
+            <h1>15,000+ cities</h1>
+            <p>The app is available in thousands of cities worldwide, so you can request a ride even when you’re far from home.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Rating -->
+      <section class="rating-section">
+        <h2>Rate Your Ride</h2>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5" /><label
+            for="star5"
+            >&#9733;</label
+          >
+          <input type="radio" id="star4" name="rating" value="4" /><label
+            for="star4"
+            >&#9733;</label
+          >
+          <input type="radio" id="star3" name="rating" value="3" /><label
+            for="star3"
+            >&#9733;</label
+          >
+          <input type="radio" id="star2" name="rating" value="2" /><label
+            for="star2"
+            >&#9733;</label
+          >
+          <input type="radio" id="star1" name="rating" value="1" /><label
+            for="star1"
+            >&#9733;</label
+          >
+        </div>
+        <textarea placeholder="feedback..."></textarea>
+        <div class="rating-buttons">
+          <button class="submit-button">Submit</button>
+          <button class="skip-button">Skip</button>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>© 2025 NeoRide - Your Safety First</p>
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </footer>
+
+    <script src="js/booking.js"></script>
+  </body>
+</html>

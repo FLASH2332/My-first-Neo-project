@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets\images\NeoRide.jpeg">
+    <title>NeoRide - Your Safe Ride</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Header section -->
+    <div style="width: 100%; padding: 50px 20px 40px 20px; text-align: center; color: #fff; margin-bottom: 36px; background: linear-gradient(120deg, #667eea 0%, #764ba2 100%); border-radius: 24px; box-shadow: 0 10px 32px rgba(102,126,234,0.18), 0 2px 8px rgba(118,75,162,0.08); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -40px; left: -40px; width: 120px; height: 120px; background: radial-gradient(circle, #fff3 60%, transparent 100%); border-radius: 50%; z-index: 0;"></div>
+        <div style="position: absolute; bottom: -30px; right: -30px; width: 90px; height: 90px; background: radial-gradient(circle, #fff2 60%, transparent 100%); border-radius: 50%; z-index: 0;"></div>
+        <h1 style="font-size: 2.7rem; margin-bottom: 10px; letter-spacing: 1.5px; font-weight: 700; z-index: 1; position: relative;">
+            <span style="font-size: 2.2rem; vertical-align: middle; margin-right: 8px;">🚗</span>
+            Welcome to <span style="color:#30113e; font-weight: bold; text-shadow: 0 2px 8px #2a093273;">NeoRide</span>
+        </h1>
+        <h5 style="font-weight: 400; opacity: 0.98; margin-bottom: 18px; font-size: 1.25rem; z-index: 1; position: relative; letter-spacing: 0.5px;">
+            <i class="fas fa-shield-alt" style="color:#ffd700; margin-right: 6px;"></i>
+            Your Safe Journey Starts Here
+        </h5>
+        <div style="height: 180px; background: rgba(255,255,255,0.13); border-radius: 22px; margin: 28px auto 0 auto; max-width: 600px; display: flex; align-items: center; justify-content: center; box-shadow: 0px 8px 24px rgba(0,0,0,0.18); position: relative; z-index: 1;">
+            <p style="font-size: 1.45rem; font-weight: 500; padding: 18px 24px; color: #2a0932; text-shadow: 0 1px 8px #fff8;">
+                <span style="background: linear-gradient(#38105b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">Experience</span>
+                safe, reliable, and smart ride booking with <span style="color:#27064a; font-weight: 600;font-style:italic;">NeoRide</span>.
+            </p>
+        </div>
+        <div style="margin-top: 22px; display: flex; justify-content: center; gap: 18px; z-index: 1; position: relative;">
+            <span style="background: rgba(255,255,255,0.13); border-radius: 12px; padding: 8px 18px; font-size: 1.05rem; font-weight: 500; color: #f0f0f0; display: flex; align-items: center; gap: 7px;">
+                <i class="fas fa-map-marker-alt"></i> Real-time Tracking
+            </span>
+            <span style="background: rgba(255,255,255,0.13); border-radius: 12px; padding: 8px 18px; font-size: 1.05rem; font-weight: 500; color: #ffffff; display: flex; align-items: center; gap: 7px;">
+                <i class="fas fa-user-shield"></i> Verified Drivers
+            </span>
+            <span style="background: rgba(255,255,255,0.13); border-radius: 12px; padding: 8px 18px; font-size: 1.05rem; font-weight: 500; color: #ffffff; display: flex; align-items: center; gap: 7px;">
+                <i class="fas fa-exclamation-triangle"></i> Emergency SOS
+            </span>
+        </div>
+    </div>
+
+    <p style="font-style: italic;padding-bottom: 5px;color:white">Login to enjoy the ride!</p>
+    <div class="login-container" id="loginContainer">
+        <div class="logo" style="font-size: 1rem; color: #2f374a; margin-bottom: 10px;">
+            <i class="fas fa-car-side"></i>
+        </div>
+        <h2  style="margin-bottom: 20px; font-weight: 600;">NeoRide</h2>
+
+        <div class="input-group"  style="position: relative; margin: 15px 0;">
+            <input type="text" id="username" placeholder="Username" required>
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password" required style="padding-right: 50px;">
+            <i class="fas fa-lock"></i>
+            <i class="fas fa-eye" id="togglePassword" style="right: 18px; left: auto; cursor: pointer;"></i>
+        </div>
+        <div class="btn-grp">
+            <button class="login-btn" onclick="login()">
+                <span id="loginText">Sign In</span>
+                <div id="loginLoader" class="loading" style="display: none;"></div>
+            </button>
+            <a href="signup.html" class="login-btn" style="text-align: center; display: block;">
+                <span>Sign Up</span>
+            </a>
+        </div>
+
+
+    </div>
+
+    <div id="mainInterface">
+        <header>
+            <i class="fas fa-car-side"></i> NeoRide - Your Safe Journey
+        </header>
+
+        <div class="main-content">
+            <div class="booking-section" id="bookingSection">
+                <h2><i class="fas fa-map-marker-alt"></i> Book Your Ride</h2>
+                <div class="booking-form">
+                    <div class="autocomplete-container">
+                        <input type="text" id="pickupLocation" placeholder="Enter pickup location" required>
+                    </div>
+                    <div class="autocomplete-container">
+                        <input type="text" id="dropoffLocation" placeholder="Enter dropoff location" required>
+                    </div>
+                    <select id="rideType">
+                        <option value="standard">Standard</option>
+                        <option value="premium">Premium</option>
+                        <option value="xl">XL</option>
+                    </select>
+                    <button class="book-btn" onclick="bookRide()">
+                        <span id="bookText">Book Ride</span>
+                        <div id="bookLoader" class="loading" style="display: none;"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="ride-status" id="rideStatus">
+                <div class="status-card">
+                    <h3><i class="fas fa-shield-alt"></i> Ride Status</h3>
+                    <div class="status-indicator">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <p>Your journey is being monitored safely</p>
+                </div>
+
+                <div class="interactive-map" onclick="toggleMap()">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Live Location Tracking</h3>
+                    <p>Click to expand map view</p>
+                    <div id="mapContainer" style="display: none; margin-top: 20px;">
+                        <iframe id="liveMapFrame"
+                            src="https://www.google.com/maps/embed/v1/place?key=YOUR_Maps_API_KEY&q=BITS+Pilani+Hyderabad+Campus"
+                            width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="ride-info-grid">
+                    <div class="ride-card">
+                        <h3><i class="fas fa-user-circle"></i> Driver Information</h3>
+                        <p><strong>Name:</strong> Alex Rider</p>
+                        <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (4.9)</p>
+                        <p><strong>Vehicle:</strong> Tesla Model 3 - Black</p>
+                        <p><strong>License:</strong> XYZ-7890</p>
+                        <p><strong>Phone:</strong> +91 9306953755</p>
+                    </div>
+                    <div class="ride-card">
+                        <h3><i class="fas fa-route"></i> Trip Details</h3>
+                        <p><strong>From:</strong> <span id="displayPickup">BITS Pilani Gate 1</span></p>
+                        <p><strong>To:</strong> <span id="displayDropoff">Vidya Vihar Colony</span></p>
+                        <p><strong>Distance:</strong> 2.5 km</p>
+                        <p><strong>ETA:</strong> <span id="eta">10 mins</span></p>
+                    </div>
+                </div>
+
+                <div class="emergency-section" id="emergencySection">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Emergency Center</h2>
+                    <p>Press the SOS button if you feel unsafe</p>
+
+                    <button class="panic-button" onclick="showEmergencyContacts()">
+                        <i class="fas fa-exclamation-triangle"></i> SOS - EMERGENCY
+                    </button>
+
+                    <div class="emergency-contacts" id="emergencyContactList">
+                        <h3><i class="fas fa-phone"></i> Emergency Contacts</h3>
+                        <div class="contact-item" onclick="selectContact('Nikhil (Bro)', '6376589226', this)">
+                            <span><i class="fas fa-user"></i> Nikhil (Bro)</span>
+                            <span>6376589226</span>
+                        </div>
+                        <div class="contact-item" onclick="selectContact('Riya (Sis)', '9729349281', this)">
+                            <span><i class="fas fa-user"></i> Riya (Sis)</span>
+                            <span>9729349281</span>
+                        </div>
+                        <div class="contact-item" onclick="selectContact('Papa', '9350721808', this)">
+                            <span><i class="fas fa-user"></i> Papa</span>
+                            <span>9350721808</span>
+                        </div>
+                        <div class="contact-item" onclick="selectContact('Mom', '9865231788', this)">
+                            <span><i class="fas fa-user"></i> Mom</span>
+                            <span>4449876543</span>
+                        </div>
+                        <div class="contact-item" onclick="selectContact('Police', '100', this)">
+                            <span><i class="fas fa-shield-alt"></i> Police</span>
+                            <span>100</span>
+                        </div>
+                        <div class="contact-item" onclick="selectContact('Women Safety', '181', this)">
+                            <span><i class="fas fa-shield-alt"></i> Women Safety</span>
+                            <span>181</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Content Section -->
+            <div style="margin-top: 50px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+                <h3>🌟 Why Choose NeoRide?</h3>
+                <p>Discover the benefits of choosing NeoRide for your transportation needs. We prioritize your safety and comfort.</p>
+                <div style="height: 400px; background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%); border-radius: 10px; margin: 20px 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2em;">
+                    <div style="text-align: center;">
+                        <h3>�️ Safety First</h3>
+                        <p>Advanced safety features and emergency contacts</p>
+                        <p>Real-time tracking and driver verification</p>
+                    </div>
+                </div>
+                <div style="height: 300px; background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); border-radius: 10px; margin: 20px 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1em;">
+                    <div style="text-align: center;">
+                        <h3>⚡ Fast & Reliable</h3>
+                        <p>Quick booking and efficient route optimization</p>
+                    </div>
+                </div>
+                <div style="height: 300px; background: linear-gradient(45deg, #ffecd2 0%, #fcb69f 100%); border-radius: 10px; margin: 20px 0; display: flex; align-items: center; justify-content: center; color: #333; font-size: 1.1em;">
+                    <div style="text-align: center;">
+                        <h3>💰 Affordable Pricing</h3>
+                        <p>Transparent pricing with no hidden fees</p>
+                    </div>
+                </div>
+                <div style="height: 250px; background: linear-gradient(45deg, #a8edea 0%, #fed6e3 100%); border-radius: 10px; margin: 20px 0; display: flex; align-items: center; justify-content: center; color: #333; font-size: 1.1em;">
+                    <div style="text-align: center;">
+                        <h3>🌍 Eco-Friendly</h3>
+                        <p>Supporting sustainable transportation solutions</p>
+                    </div>
+                </div>
+                <div style="height: 200px; background: linear-gradient(45deg, #d299c2 0%, #fef9d7 100%); border-radius: 10px; margin: 20px 0; display: flex; align-items: center; justify-content: center; color: #333; font-size: 1.1em;">
+                    <div style="text-align: center;">
+                        <h3>📱 Easy to Use</h3>
+                        <p>Simple interface with powerful features</p>
+                    </div>
+                </div>
+                
+                <!-- Scroll to Top Button Summary -->
+                <div style="margin-top: 30px; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white;">
+                    <p>Purple scroll to top button in bottom-right corner for quick page navigation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="floating-widgets">
+            <button class="floating-widget" onclick="shareLocation()" title="Share Location">
+                <i class="fas fa-location-arrow"></i>
+            </button>
+            <button class="floating-widget" onclick="callDriver()" title="Call Driver">
+                <i class="fas fa-phone"></i>
+            </button>
+            <button class="floating-widget" onclick="sendFeedback()" title="Send Feedback">
+                <i class="fas fa-comment"></i>
+            </button>
+        </div>
+
+        <footer>
+            © 2025 NeoRide - Your Safety First
+        </footer>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" onclick="scrollToTop(); return false;" title="Go to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div id="notification" class="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <div id="emergencyModal" class="modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-exclamation-triangle" style="color: #ff6b6b;"></i> Confirm Emergency Alert</h2>
+            <p>Are you sure you want to send an SOS alert?</p>
+            <p><strong>Selected Contact:</strong> <span id="selectedContactName"></span></p>
+            <button class="modal-button confirm-btn" onclick="confirmSOS()">Send SOS</button>
+            <button class="modal-button cancel-btn" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 NeoRide - Your Safety First</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-x"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="contact.html"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

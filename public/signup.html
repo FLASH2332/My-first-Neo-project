@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- Google Identity library (kept) -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="signupContainer" id="signupContainer">
+      <div class="logo">
+        <i class="fas fa-car-side"></i>
+      </div>
+      <h2>NeoRide</h2>
+  
+      <form id="signup-form">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="name" required />
+          <div id="name" class="name"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" required />
+          <div id="emailFeedback" class="inline-feedback"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" required />
+          <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
+        </div>
+
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" id="confirm-password" required />
+          <span class="toggle-password" onclick="togglePassword('confirm-password')">👁️</span>
+          <div id="matchFeedback" class="inline-feedback"></div>
+        </div>
+
+        <!-- Normal Signup -->
+        <button type="submit" class="btn">Sign Up</button>
+        <div class="spinner" id="spinner"></div>
+
+        <!-- Google Sign-In Button -->
+        <div id="customGoogleBtn" class="btn">Continue with Google</div>
+
+        <div class="login-page">
+          <p>Already have an account? <a href="neocode.html">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/signup.js"></script>
+</body>
+</html>
